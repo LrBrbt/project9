@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_9практическая"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="321">
+        Title="MainWindow" Height="543" Width="341">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -16,20 +16,21 @@
         </Grid.RowDefinitions>
         <GroupBox Header="Информация о компьютерах" Margin="10,10,0,10">
             <Grid>
-                <DataGrid />
+                <ListBox x:Name="Computers" MouseDoubleClick="Computers_MouseDoubleClick" SelectionMode="Multiple"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Ввод информации о компютере" Margin="51,160,41,0" Grid.RowSpan="2">
-            <Grid Margin="0,0,-2,0">
+        <GroupBox Header="Ввод информации о компютере" Margin="51,10,41,10" Grid.Row="1">
+            <Grid Margin="10,0,-2,0" Height="296">
                 <TextBox x:Name="textboxProcessorType" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,42,0,0" Height="27"/>
-                <TextBox HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,99,0,0" Height="27"/>
-                <TextBox HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,156,0,0" Height="27"/>
-                <TextBox HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,214,0,0" Height="27"/>
+                <TextBox x:Name="textboxMemorySize" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,99,0,0" Height="27"/>
+                <TextBox x:Name="textboxHDDSize" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,156,0,0" Height="27"/>
+                <TextBox x:Name="textboxVideoCard" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="120" Margin="10,214,0,0" Height="27"/>
                 <Label Content="Тип процессора" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="120"/>
                 <Label Content="Объем памяти" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="120"/>
                 <Label Content="Объем жесткого диска" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="148"/>
                 <Label Content="Видеокарта" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="148"/>
-                <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Left" Margin="144,214,0,0" VerticalAlignment="Top" Height="29" Width="65" Click="Add_Click"/>
+                <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Left" Margin="135,214,0,0" VerticalAlignment="Top" Height="27" Width="84" Click="Add_Click"/>
+                <Button x:Name="Average" Content="Вывести средний объем памяти" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Height="29" Width="209" Click="Average_Click" />
             </Grid>
         </GroupBox>
 
